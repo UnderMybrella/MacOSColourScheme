@@ -214,7 +214,7 @@ class MacOSColourScheme {
     /**
      * The colors to use for alternating content, typically found in table views and collection views
      */
-    var alternatingContentBackgroundAndColors: Array<Color> = emptyArray()
+    var alternatingContentBackgroundColors: Array<Color> = emptyArray()
 
 
     //Control Colors
@@ -248,7 +248,7 @@ class MacOSColourScheme {
     /**
      * The current system control tint color
      */
-    var currentControlTint: Color? = null
+    var currentControlTint: Int? = null
 
     /**
      * The color to use for the face of a selected control - that is, a control that has been clicked or is being dragged
