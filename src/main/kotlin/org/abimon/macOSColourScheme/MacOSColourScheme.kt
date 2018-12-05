@@ -307,4 +307,72 @@ class MacOSColourScheme {
      * The color to use for virtual shadows cast by raised objects on the screen
      */
     var shadowColor: Color? = null
+
+
+    //Deprecated Colors
+    //TODO: Find an alternative
+
+    /**
+     * The system color used for the flat surface of a slider knob that hasn't been selected
+     */
+    var knobColor: Color? = null
+
+    /**
+     * The system color used for the slider knob when it is selected
+     */
+    var selectedKnobColor: Color? = null
+
+    /**
+     * The system color used for scroll "bars" - that is, for the groove in which a scroller's knob moves
+     */
+    var scrollBarColor: Color? = null
+
+
+    //System Colors
+
+
+    /**
+     * Returns a color object for red that automatically adapts to vibrancy and accessibility settings.
+     */
+    var systemRed: Color? = null
+
+    /**
+     * Returns a color object for green that automatically adapts to vibrancy and accessibility settings.
+     */
+    var systemGreen: Color? = null
+
+    /**
+     * Returns a color object for blue that automatically adapts to vibrancy and accessibility settings.
+     */
+    var systemBlue: Color? = null
+
+    /**
+     * Returns a color object for orange that automatically adapts to vibrancy and accessibility settings.
+     */
+    var systemOrange: Color? = null
+
+    /**
+     * Returns a color object for yellow that automatically adapts to vibrancy and accessibility settings.
+     */
+    var systemYellow: Color? = null
+
+    /**
+     * Returns a color object for brown that automatically adapts to vibrancy and accessibility settings.
+     */
+    var systemBrown: Color? = null
+
+    /**
+     * Returns a color object for pink that automatically adapts to vibrancy and accessibility settings.
+     */
+    var systemPink: Color? = null
+
+    /**
+     * Returns a color object for purple that automatically adapts to vibrancy and accessibility settings.
+     */
+    var systemPurple: Color? = null
+
+    /**
+     * Returns a color object for gray that automatically adapts to vibrancy and accessibility settings.
+     */
+    var systemGray: Color? = null
 }
