@@ -1,0 +1,152 @@
+.root {
+    /** -fx-background-color: #403c37; */
+    -fx-background-color: %underPageBackgroundColor;
+}
+
+.button, .combo-box {
+    -fx-background-color: %controlColor;
+    -fx-text-fill: %controlTextColor;
+}
+
+
+.combo-box .list-cell {
+    -fx-background-color: %controlColor;
+    -fx-text-fill: %controlTextColor;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: %controlAccentColor;
+    -fx-text-fill: %selectedMenuItemTextColor;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: %controlColor;
+}
+
+.combo-box .arrow {
+    -fx-background-color: %controlTextColor;
+}
+
+
+.label {
+    -fx-text-fill: %textColor;
+}
+
+.separator {
+    -fx-background: %separatorColor;
+}
+
+/*.list-view {*/
+/*-fx-background-color: %windowBackgroundColor;*/
+/*-fx-border-color: %separatorColor;*/
+/*}*/
+
+.list-view .list-cell {
+    -fx-background-color: %alternatingContentBackgroundColor;
+    -fx-text-fill: %textColor;
+}
+
+
+/** .list-view .list-cell:hover, */ .list-view .list-cell:selected {
+                                        -fx-background-color: %selectedContentBackgroundColor;
+                                        -fx-text-fill: %textColor;
+                                    }
+
+.list-view .list-cell:drop-target {
+    -fx-border-width: 2 0 0 0;
+    -fx-border-color: %controlAccentColor;
+}
+
+.text-area .content {
+    -fx-border-width: 0 0 0 0;
+}
+
+.list-view, .scroll-pane, .pane, .text-area .content {
+    -fx-background: %windowBackgroundColor;
+    -fx-background-color: %windowBackgroundColor;
+    -fx-background-radius: 0 ;
+    -fx-border-color: %separatorColor;
+}
+
+.hbox, .vbox {
+    -fx-background: %windowBackgroundColor;
+    -fx-background-color: %windowBackgroundColor;
+    -fx-border-color: %separatorColor;
+}
+
+.text-area {
+    -fx-text-fill: %textColor;
+}
+
+.split-pane {
+    -fx-box-border: transparent;
+}
+
+.split-pane .split-pane-divider {
+    -fx-background-color: %underPageBackgroundColor;
+}
+
+.scroll-bar {
+    -fx-background-color: %controlBackgroundColor;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: %separatorColor;
+}
+
+.scroll-bar .increment-button ,
+.scroll-bar .decrement-button {
+    -fx-background-color: %controlColor;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-background-color: %controlTextColor;
+}
+
+.corner {
+    -fx-background-color: transparent;
+}
+
+/*.dialog-pane:header *.header-panel{*/
+/*-fx-background-color: #2f3136;*/
+/*}*/
+
+.text-element:default {
+    -fx-fill: %textColor;
+}
+
+.text-element:red {
+    -fx-fill: %systemRed
+}
+
+.text-element:green {
+    -fx-fill: %systemGreen
+}
+
+.text-element:blue {
+    -fx-fill: %systemBlue
+}
+
+.text-element:orange {
+    -fx-fill: %systemOrange
+}
+
+.text-element:yellow {
+    -fx-fill: %systemYellow
+}
+
+.text-element:brown {
+    -fx-fill: %systemBrown
+}
+.text-element:pink {
+    -fx-fill: %systemPink
+}
+
+.text-element:purple {
+    -fx-fill: %systemPurple
+}
+
+.text-element:gray {
+    -fx-fill: %systemGray
+}

@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.module.SimpleModule
 import java.awt.Color
 import java.io.File
 import java.io.FileOutputStream
+import java.io.InputStream
 import java.util.*
 import java.util.concurrent.TimeUnit
 
@@ -88,7 +89,15 @@ class MacOSColourScheme {
                 val process = ProcessBuilder(listOf(file.absolutePath)).start()
                 process.waitFor(5, TimeUnit.SECONDS)
 
-                return MAPPER.readValue(process.inputStream, MacOSColourScheme::class.java)
+                val scheme = MAPPER.readValue(process.inputStream, MacOSColourScheme::class.java)
+                if (scheme._isDarkTheme == null) {
+                    val styleProcess = ProcessBuilder("defaults", "read", "-g", "AppleInterfaceStyle").start()
+                    styleProcess.waitFor(1, TimeUnit.SECONDS)
+                    val name = String(styleProcess.inputStream.use(InputStream::readBytes)).toLowerCase().trim()
+                    scheme._isDarkTheme = name.equals("dark", true)
+                }
+
+                return scheme
             } catch (json: JsonMappingException) {
                 return null
             } finally {
@@ -97,6 +106,12 @@ class MacOSColourScheme {
         }
     }
 
+    var _isDarkTheme: Boolean? = null
+    var isDarkTheme: Boolean
+        get() = _isDarkTheme ?: false
+        set(value) {
+            _isDarkTheme = value
+        }
 
     //Label Colors
 
